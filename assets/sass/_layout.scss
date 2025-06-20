@@ -87,10 +87,30 @@
   }
 }
 
+/*
+  CSS to make HTML page footer stay at bottom of the page with a minimum height, but not overlap the page
+  https://stackoverflow.com/questions/643879/
+*/
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+body > div.navbar {
+  min-width: 80vw;
+}
+
+body > div.wrapper {
+  flex: 1;
+  min-width: 60vw;
+}
+
 // Footer
 .footer {
+  /*
   margin-top: 8em;
-  margin-bottom: 2em;
+  */
+  margin-bottom: 10px;
   text-align: center;
 
   @include media-query($on-mobile) {
